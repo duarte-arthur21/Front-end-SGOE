@@ -70,11 +70,14 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  }
 
 abbr[title],
 abbr[data-original-title] {
@@ -287,6 +290,19 @@ progress {
   font: inherit;
   -webkit-appearance: button; }
 
+#Pesquisar {
+  
+}
+
+.search-txt {
+ margin: 1px;
+ width: 300px;
+ background: "#D3D3D3";
+ left: 200px;
+ padding: 5px 10p;
+ float: left;
+ transition: 0.5;
+}
 output {
   display: inline-block; }
 
@@ -324,6 +340,9 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
+  .p-btn {
+  text-align: center; 
+}
 .lead {
   font-size: 1.25rem;
   font-weight: 300; }
@@ -6544,7 +6563,9 @@ button.bg-dark:focus {
   background-color: rgba(0, 0, 0, 0); }
 
 .m-0 {
-  margin: 0 !important; }
+  margin: 0 !important;
+  text-align: center;
+}
 
 .mt-0,
 .my-0 {
@@ -7959,6 +7980,17 @@ button.bg-dark:focus {
     text-align: right !important; }
   .text-xl-center {
     text-align: center !important; } }
+
+.txt-name {
+  margin: 1px;
+ width: 300px;
+ background: "#D3D3D3";
+ left: 20px;
+ padding: 5px 10p;
+ float: left;
+ transition: 0.5;
+ 
+}
 
 .text-lowercase {
   text-transform: lowercase !important; }
