@@ -281,7 +281,10 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  background-color: "#696969";
+
+}
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -297,7 +300,7 @@ progress {
 .search-txt {
  margin: 1px;
  width: 300px;
- background: "#D3D3D3";
+ background-color: "#696969";;
  left: 200px;
  padding: 5px 10p;
  float: left;
@@ -7982,8 +7985,9 @@ button.bg-dark:focus {
     text-align: center !important; } }
 
 .txt-name {
-  margin: 1px;
+ margin: 1px;
  width: 300px;
+
  background: "#D3D3D3";
  left: 20px;
  padding: 5px 10p;
@@ -8195,6 +8199,7 @@ button {
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
+  align-items: center;
   line-height: 1.5;
   font-weight: 400;
   font-family: "Poppins", Arial, sans-serif;

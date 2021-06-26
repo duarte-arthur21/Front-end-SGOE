@@ -58,7 +58,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                    <i class="fa fa-bars"></i>
                    <span class="sr-only">Toggle Menu</span>
                  </button>
-                 <h5 class="m-0 font-weight-bold text-warning">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
+                 <h5 class="m-0 font-weight-bold text-warning" align="center">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
                </div>
              </nav>
              <div class="container-fluid">
@@ -68,40 +68,43 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                 <a>email:jkdl</a>
                 <p>Código 0001</p>
 
-                <li>
-                  <input class="txt-name" type="text" name="Nome" placeholder="Nome" >
-
+                <a>
+                  <input class="txt-name" type="text" name="Nome" placeholder="Nome">
                   <form>
-                    <label>Pesquisar em...</label>
-                    <select aria-placeholde="Pesquisar em...">
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
+                      <select type="button" id="sidebarCollapse" class="btn btn-primary">
+                      <option>Pesquisar em...</option>
+                      <option>Aluno 1</option>
+                      <option>Aluno 2</option>
+                      <option>Aluno 3</option>
+                      <option>Aluno 4</option>
+                      <option>Aluno 5</option>
                     </select>
                   </form>
-                </li>
+                </a>
+
+                <p><br></p>
                 
                 <div class="input-group mb-3">                  
-                  <input class="search-txt" type="text" name="Pesquisar" placeholder="Buscar" >
+                  <input class="search-txt" type="search" name="Pesquisar" placeholder="Buscar" list="historico">
 
                   <div class="input-group-append">
                     <button class="btn btn-outline" type="submit" id="butto-addon2">
                       <i class="fas fa-search"></i>
                     </button>
                   </div>
-                  <li class="p-btn">                 
+
+                  <datalist id="historico">
+                    <option value="Nome"></option>
+                  </datalist>
+
+                  <a class="p-btn">                 
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">Abrir</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Grafico</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Cancelar</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Sair</button>
-                  </li>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Grafico&nbsp;</button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Cancelar&nbsp;</button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Sair&nbsp;</button>
+                  </a>
                 </div>
-                
-               <div class="card-body" >
-                 
-               </div>
+
              </div>
            </div>
          </div>
