@@ -58,19 +58,19 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                    <i class="fa fa-bars"></i>
                    <span class="sr-only">Toggle Menu</span>
                  </button>
-                 <h5 class="m-0 font-weight-bold text-warning" align="center">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
+                 <h5 class="m-0 font-weight-bold text-warning">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
                </div>
              </nav>
              <div class="container-fluid">
               <!-- Basic Card Example -->
 
               <div class="card shadow mb-4">
-                <a>email:jkdl</a>
                 <p>Código 0001</p>
 
+                <form>
                 <a>
-                  <input class="txt-name" type="text" name="Nome" placeholder="Nome">
-                  <form>
+                  <input class="btn btn-outline-ligth" type="text" name="Nome" placeholder="Nome">
+                  <button class="btn btn-outline"></button>                 
                       <select type="button" id="sidebarCollapse" class="btn btn-primary">
                       <option>Pesquisar em...</option>
                       <option>Aluno 1</option>
@@ -84,26 +84,37 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
                 <p><br></p>
                 
-                <div class="input-group mb-3">                  
-                  <input class="search-txt" type="search" name="Pesquisar" placeholder="Buscar" list="historico">
-
-                  <div class="input-group-append">
-                    <button class="btn btn-outline" type="submit" id="butto-addon2">
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
+                <div class="input-group mb-3">            
+                <form action="#" method="POST">
+                    <button class="btn btn-outline"></button>
+                    <input class="btn btn-outline-secondary" type="search" name="Pesquisar" placeholder="Buscar" 
+                    list="historico" required>
+                    <button class="btn btn-outline-dark" type="submit" id="butto-addon2"> <i class="fas fa-search"></i>
+                    </button>                 
+                </form>
 
                   <datalist id="historico">
                     <option value="Nome"></option>
                   </datalist>
 
                   <a class="p-btn">                 
+                    <button class="btn btn-outline"></button>
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">Abrir</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Grafico&nbsp;</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Cancelar&nbsp;</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&nbsp;Sair&nbsp;</button>
+                    <button class="btn btn-outline"></button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Grafico&</button>
+                    <button class="btn btn-outline"></button>
+                   <button type="button" id="sidebarCollapse" class="btn btn-primary">Cancelar</button>
+                   <button class="btn btn-outline"></button>
+                   <button type="button" id="sidebarCollapse" class="btn btn-primary">Sair</button>
                   </a>
                 </div>
+
+                <a>
+                  <button class="btn btn-outline"></button>
+                  <textarea class="btn btn-outline-ligth" type="textarea" rows="15" cols="100">
+                    
+                  </textarea>
+                </a>
 
              </div>
            </div>
