@@ -11,6 +11,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
      <script src="https://kit.fontawesome.com/429cb4c289.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="style/css/style.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
     </head>
     <body>
@@ -51,7 +53,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
      
            <!-- Page Content  -->
            <div id="content">
-     
+          
              <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div class="container-fluid">
                  <button type="button" id="sidebarCollapse" class="btn btn-primary">
@@ -67,9 +69,11 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
               <div class="card shadow mb-4">
                 <p>Código 0001</p>
 
-                <form>
+                <div>               
                 <a>
-                  <input class="btn btn-outline-ligth" type="text" name="Nome" placeholder="Nome">
+                  <button class="btn btn-outline"></button>
+                  <input class="btn btn-light" type="text" placeholder="Nome" rows="10">
+
                   <button class="btn btn-outline"></button>                 
                       <select type="button" id="sidebarCollapse" class="btn btn-primary">
                       <option>Pesquisar em...</option>
@@ -79,8 +83,9 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                       <option>Aluno 4</option>
                       <option>Aluno 5</option>
                     </select>
-                  </form>
-                </a>
+                    </a>
+                 
+                </div>
 
                 <p><br></p>
                 
@@ -99,22 +104,23 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
                   <a class="p-btn">                 
                     <button class="btn btn-outline"></button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Abrir</button>
-                    <button class="btn btn-outline"></button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">Grafico&</button>
-                    <button class="btn btn-outline"></button>
-                   <button type="button" id="sidebarCollapse" class="btn btn-primary">Cancelar</button>
-                   <button class="btn btn-outline"></button>
-                   <button type="button" id="sidebarCollapse" class="btn btn-primary">Sair</button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160; Abrir &#160;</button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Grafico&#160;</button>                   
+                   <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Cancelar&#160;</button>
+                   <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;&#160;</button>
                   </a>
                 </div>
 
-                <a>
+                <div>
+                 <form action="#">
                   <button class="btn btn-outline"></button>
-                  <textarea class="btn btn-outline-ligth" type="textarea" rows="15" cols="100">
-                    
+                  <textarea class="btn btn-light" type="readonly" rows="15" cols="100">                    
                   </textarea>
-                </a>
+                </form>
+              </div>
+              <button class="btn btn-outline"></button>
+              <button class="btn btn-outline"></button>
+             
 
              </div>
            </div>

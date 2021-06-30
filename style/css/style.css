@@ -3,9 +3,20 @@
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Autor: Arthur Duarte
  */
 #name{
   rows: 15,
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 90vh;
+}
+.carousel-caption h2{
+  top: 10%;
+  font-size: 90px;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
 
 :root {
@@ -76,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   text-align: center;
+  
 }
 
 p {
@@ -207,11 +219,14 @@ input,
 button,
 select,
 optgroup,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+textarea .form-control:not(textarea){
+  margin: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 25px;
+ }
 
 button,
 input {
@@ -255,9 +270,6 @@ input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox; }
 
-textarea {
-  overflow: auto;
-  resize: vertical; }
 
 fieldset {
   min-width: 0;
@@ -327,13 +339,16 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
-  line-height: 1.2; }
+  line-height: 1.2;
+}
 
 h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  text-shadow: 4px 5px 10px #000;
+}
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -342,7 +357,9 @@ h4, .h4 {
   font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  text-align: center;
+ }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -493,8 +510,7 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0;
   margin-right: auto;
   margin-left: auto; }
 
@@ -1818,7 +1834,7 @@ textarea.form-control {
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem); }
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
-  border-color: #28a745;
+  border-color: #858b87;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem); }
   .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -2125,13 +2141,16 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d; }
+
   .btn-secondary:hover {
     color: #fff;
     background-color: #5a6268;
     border-color: #545b62; }
+
   .btn-secondary:focus, .btn-secondary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5); }
+
   .btn-secondary.disabled, .btn-secondary:disabled {
     color: #fff;
     background-color: #6c757d;
@@ -2251,9 +2270,11 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5); }
 
 .btn-light {
-  color: #212529;
+  color: #000;
   background-color: #f8f9fa;
-  border-color: #f8f9fa; }
+  border-color: #f8f9fa; 
+ }
+
   .btn-light:hover {
     color: #212529;
     background-color: #e2e6ea;
@@ -8169,7 +8190,8 @@ a.text-dark:hover, a.text-dark:focus {
   img {
     page-break-inside: avoid; }
   p,
-  h2,
+  h2, 
+   
   h3 {
     orphans: 3;
     widows: 3; }
@@ -8240,7 +8262,8 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   font-weight: 400;
   font-family: "Poppins", Arial, sans-serif;
-  color: #000; }
+  color: white;
+}
 
 .ftco-section {
   padding: 7em 0; }
