@@ -69,13 +69,11 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
               <div class="card shadow mb-4">
                 <p>Código 0001</p>
 
-                <div>               
+                <div class="card-body">               
                 <a>
-                  <button class="btn btn-outline"></button>
-                  <input class="btn btn-light" type="text" placeholder="Nome" rows="10">
-
-                  <button class="btn btn-outline"></button>                 
-                      <select type="button" id="sidebarCollapse" class="btn btn-primary">
+                  <input class="btn btn-light col-sm-6" type="text" placeholder="Nome" rows="10">
+               
+                      <select class="btn btn-primary" type="button" id="sidebarCollapse">
                       <option>Pesquisar em...</option>
                       <option>Aluno 1</option>
                       <option>Aluno 2</option>
@@ -86,40 +84,31 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                     </a>
                  
                 </div>
-
-                <p><br></p>
                 
-                <div class="input-group mb-3">            
+                <div class="card-body">         
                 <form action="#" method="POST">
-                    <button class="btn btn-outline"></button>
-                    <input class="btn btn-outline-secondary" type="search" name="Pesquisar" placeholder="Buscar" 
+                  <input class="btn btn-outline-secondary col-sm-6" type="search" name="Pesquisar" placeholder="Buscar" 
                     list="historico" required>
-                    <button class="btn btn-outline-dark" type="submit" id="butto-addon2"> <i class="fas fa-search"></i>
-                    </button>                 
-                </form>
+                    <button class="btn btn-outline-dark" type="submit" id="butto-addon2"><i class="fas fa-search"></i>
+                    </button>   
 
                   <datalist id="historico">
                     <option value="Nome"></option>
                   </datalist>
-
-                  <a class="p-btn">                 
-                    <button class="btn btn-outline"></button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160; Abrir &#160;</button>
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Grafico&#160;</button>                   
-                   <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Cancelar&#160;</button>
-                   <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;&#160;</button>
-                  </a>
+                                 
+                  <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160; Abrir &#160;</button>
+                  <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Grafico&#160;</button>                   
+                  <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Cancelar&#160;</button>
+                  <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;&#160;</button>
+                  </form>
                 </div>
 
+                <div class="card-body">  
                 <form action="#">
-                  <button class="btn btn-outline"></button>
                   <textarea id="descricao" class="btn btn-light" type="readonly" rows="15" cols="100">                    
                   </textarea>
                 </form>
-              
-              <button class="btn btn-outline"></button>
-              <button class="btn btn-outline"></button>
-             
+                </div>
 
              </div>
            </div>

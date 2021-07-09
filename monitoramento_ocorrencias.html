@@ -10,6 +10,10 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="style/css/style.css">
 
+     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+     <script src="js/bootstrap-datepicker.min.js"></script>
+     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
+
     </head>
     <body>
         <div class="wrapper d-flex align-items-stretch">
@@ -62,8 +66,42 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
              <div class="container-fluid">
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
-                <a>email:jkdl</a>
-               <div class="card-body" >
+                <p>Código 0001</p>
+
+               <div class="card-body" >                               
+                      <input class="btn btn-light" type="text" placeholder="Nome" rows="10">
+                      <input class="btn btn-light col-sm-6" type="text" placeholder="Descrição do Ocorrido" rows="10">
+                                
+                          <select type="button" id="sidebarCollapse" class="btn btn-primary">
+                          <option>Status</option>
+                          <option>Em Edição</option>
+                          <option>Enviado ao NAP</option>
+                          <option>Concluido</option>
+                        </select>                     
+                                                 
+                        <form action="#">
+                            <p>Descrição de Fechamento:</p>
+                            <textarea id="descricao" class="btn btn-light" type="readonly" rows="10" cols="100">                    
+                            </textarea>
+                        </form>
+
+                        <form class="form-horizontal">                        
+                          <div class="form-group">
+                            <label class="col-sm-2 control label">Data de Fechamento:</label>                            
+                            <div class="col-sm-5">
+                              <div class="input-group date">
+                                <input type="text" class="form-control" id="exeplo">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                          
+
+                          <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Alterar&#160;</button>
+                          <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;</button>                     
+                        </form>             
+                      </div>
                  
                </div>
              </div>
@@ -71,9 +109,15 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
          </div>
          </div>
 
-    <script src="style/js/jquery.min.js"></script>
+  <script src="style/js/jquery.min.js"></script>
 	<script src="style/js/popper.js"></script>
 	<script src="style/js/bootstrap.min.js"></script>
 	<script src="style/js/main.js"></script>
+  <script type="text/javascript">
+    $('.#calendario').datepicker({
+    format: 'dd/mm/yyyy',
+    language: "pt-BR",
+    startDate: '+0d'   
+    });</script>
 </body>
 </html>
