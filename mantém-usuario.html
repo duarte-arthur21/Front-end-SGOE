@@ -13,7 +13,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <link rel="stylesheet" href="style/css/style.css">
     <script src="script/scripit.js" defer></script>
     <script src="scss/bootstrap/_utilities.scss"></script>
-    
+
     </head>
     <body>
         <div class="wrapper d-flex align-items-stretch">
@@ -66,15 +66,43 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
              <div class="container-fluid">
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
+                <a>Código 0001</a>
+
+               <div class="card-body">                              
                 <form action="#" method="POST">
+                    <button type="button" class="col-sm-3 btn btn-outline"></button>           
                     <input class="btn btn-outline-secondary col-sm-6" type="search" name="Pesquisar" placeholder="Buscar" 
                       list="historico" required>
                       <button class="btn btn-outline-dark" type="submit" id="butto-addon2"><i class="fas fa-search"></i>
                       </button>
                 </form>
+                <button type="button" class="col-sm-3 btn btn-outline"></button>
                 
-               <div class="card-body" >
-                <p>Código 0001</p>
+                </div>
+
+                <div class="card-body">
+                <input class="btn btn-light col-sm-10" type="text" placeholder="Nome">
+                </div>
+
+                <div class="card-body">
+                <input class="btn btn-light col-sm-4" type="text" placeholder="Telefone">
+
+                <input class="btn btn-light col-sm-6" type="text" placeholder="E-mail">
+                </div>
+                <p></p>
+
+                <div class="card-body">
+                    <p></p>
+                      <button type="button" class="col-sm-6 btn btn-outline"></button> 
+                      <button type="button" class="col-sm-6 btn btn-outline"></button> 
+                      <button type="button" class="col-sm-6 btn btn-outline"></button>                                     
+                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Salvar&#160;</button>
+                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Alterar&#160;</button>                   
+                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Excluir&#160;</button>
+                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Cancelar&#160;&#160;</button>
+                      </form>
+                </div>
+                
                </div>
              </div>
            </div>
