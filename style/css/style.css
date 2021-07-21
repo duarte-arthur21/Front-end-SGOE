@@ -309,9 +309,10 @@ progress {
   font: inherit;
   -webkit-appearance: button; }
 
-#Pesquisar {
-  
+#altSenha {
+  text-align: right,
 }
+
 
 .search-txt {
  margin: 1px;
