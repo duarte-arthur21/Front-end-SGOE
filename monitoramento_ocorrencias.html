@@ -1,149 +1,129 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoramento de Ocorrências</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     
-    <!-- Jquery -->
-     <script src="libs/jquery-3.6.0.min.js" charset="utf-8"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="style/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/css/style.css">
 
-     <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
-     <script src="js/bootstrap-datepicker.min.js"></script>
-     <script src="js/bootstrap-datepicker.pt-BR.min.js"></script>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.pt-BR.min.js"></script> 
 
     <!--DatePicker-->
-    <script src="libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <link rel="alternate" href="libs/bootstrap-datepicker/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 		
-    </head>
-    <body>
-        <div class="wrapper d-flex align-items-stretch">
-            <nav id="sidebar">
-             <div class="p-4 pt-5">
-               <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/user-avatar.png);"></a>
-               <ul class="list-unstyled components mb-5">
-                <li class="active">
-                  <a href="#">Inicio</a>
-                </li>
-                <li>
-                  <a href="#">Alterar Senha</a>
-                </li>
-                <li>
-                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Novo Registro</a>
-                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                   <li>
-                     <a href="#">Cadastrar Usuario</a>
-                   </li>
-                   <li>
-                     <a href="#">Gerar Ocorrência</a>
-                   </li>
-                 </ul>
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+         <div class="p-4 pt-5">
+           <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/user-avatar.png);"></a>
+           <ul class="list-unstyled components mb-5">
+            <li class="active">
+              <a href="#">Inicio</a>
+            </li>
+            <li>
+              <a href="#">Alterar Senha</a>
+            </li>
+            <li>
+             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Novo Registro</a>
+             <ul class="collapse list-unstyled" id="pageSubmenu">
+               <li>
+                 <a href="#">Cadastrar Usuario</a>
                </li>
                <li>
-                 <a href="#">Pesquisar</a>
+                 <a href="#">Gerar Ocorrência</a>
                </li>
              </ul>
-     
-             <div class="footer">
-               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                 Copyright &copy;<script>document.write(new Date().getFullYear());</script><i class="icon-heart" aria-hidden="true"></i>
-                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-               </div>
-             </div>
-           </nav>
-     
-           <!-- Page Content  -->
-           <div id="content">
-     
-             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container-fluid">
-                 <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                   <i class="fa fa-bars"></i>
-                   <span class="sr-only">Toggle Menu</span>
-                 </button>
-                 <h5 class="m-0 font-weight-bold text-warning">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
-               </div>
-             </nav>
-             <div class="container-fluid">
-              <!-- Basic Card Example -->
-              <div class="card shadow mb-4">
-                <p>Código 0001</p>
-
-               <div class="card-body" >                               
-                      <input class="btn btn-light" type="text" placeholder="Nome" rows="10">
-                      <input class="btn btn-light col-sm-6" type="text" placeholder="Descrição do Ocorrido" rows="10">
-                                
-                          <select type="button" id="sidebarCollapse" class="btn btn-primary">
-                          <option>Status</option>
-                          <option>Em Edição</option>
-                          <option>Enviado ao NAP</option>
-                          <option>Concluido</option>
-                        </select>                     
-                                                 
-                        <form action="#">
-                            <p>Descrição de Fechamento:</p>
-                            <textarea id="descricao" class="btn btn-light" type="readonly" rows="10" cols="100">                    
-                            </textarea>
-                        </form>
-
-                        <div class="container">                  
-                          <div class="form-group">
-                           <label class="col-sm-1 control-label">Data</label>
-
-                           <button type="button" id="botModal" class="btn btn-primary">Calendario</button>
-                                              
-                          </div>             
-                      </div>
-
-                      <div class="modal fade" id="modal-date" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                              <h4 class="modal-title">Modal title</h4>
-                            </div>
-                            <div class="modal-body">
-
-                              <div class="input-group date fj-date">
-                                <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-                              </div>
-
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Selecionar</button>
-                            </div>
-                          </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                      </div>
-                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Alterar&#160;</button>
-                      <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;</button> 
-
-                      <script scr="js/app.js" charset="utf-8"></script>
-                 
-               </div>
-             </div>
+           </li>
+           <li>
+             <a href="#">Pesquisar</a>
+           </li>
+         </ul>
+ 
+         <div class="footer">
+           <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+             Copyright &copy;<script>document.write(new Date().getFullYear());</script><i class="icon-heart" aria-hidden="true"></i>
+             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
            </div>
          </div>
-         </div>
-
-  <script src="style/js/jquery.min.js"></script>
-	<script src="style/js/popper.js"></script>
-	<script src="style/js/bootstrap.min.js"></script>
-	<script src="style/js/main.js"></script>
+       </nav>
  
+       <!-- Page Content  -->
+       <div id="content">
+ 
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           <div class="container-fluid">
+             <button type="button" id="sidebarCollapse" class="btn btn-primary">
+               <i class="fa fa-bars"></i>
+               <span class="sr-only">Toggle Menu</span>
+             </button>
+             <h5 class="m-0 font-weight-bold text-warning">Sistema de Gerenciamento de Ocorrencias Estudantis</h5>
+           </div>
+         </nav>
+         <div class="container-fluid">
+          <!-- Basic Card Example -->
+          <div class="card shadow mb-4">
+            <p>Código 0001</p>
+
+            <div class="card-body" >                           
+              <input class="espaço btn btn-light" type="text" placeholder="Nome">
+              <input class="espaço btn btn-light col-sm-4" type="text" placeholder="Descrição do Ocorrido">                        
+                  <select type="button" id="sidebarCollapse" class="btn btn-primary">
+                  <option>Status</option>
+                  <option>Em Edição</option>
+                  <option>Enviado ao NAP</option>
+                  <option>Concluido</option>
+                </select>
+            </div>
+
+           <div class="card-body" >            
+            <form action="#">
+              <p>Descrição de Fechamento:</p>
+              <textarea id="descricao" class="btn btn-light" type="readonly" rows="10" cols="100">                    
+              </textarea>
+            </form>
+            </div>
+
+            <div class="card-body">
+                <section class="col-sm-6">
+                  <div class="form-group">
+                      <div class='input-group date' id='datetimepicker1'>
+                          <input type='text' class="form-control" />
+                          <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                  </div>
+                </section>
+              <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Alterar&#160;</button>
+              <button type="button" id="sidebarCollapse" class="btn btn-primary">&#160;Sair&#160;</button>
+            </div>
+
+         </div>
+       </div>
+     </div>
+     </div>
+<script type="text/javascript">
+      $(function() {
+          $('#datetimepicker1').datetimepicker();
+      });
+</script>
+<script src="style/js/jquery.min.js"></script>
+<script src="style/js/popper.js"></script>
+<script src="style/js/bootstrap.min.js"></script>
+<script src="style/js/main.js"></script>
+
 </body>
 </html>

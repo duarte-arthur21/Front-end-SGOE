@@ -312,7 +312,9 @@ progress {
 #altSenha {
   text-align: right,
 }
-
+.espaço{
+  margin-right: 10px;
+}
 
 .search-txt {
  margin: 1px;
