@@ -22,26 +22,27 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/user-avatar.png);"></a>
                <ul class="list-unstyled components mb-5">
                 <li class="active">
-                  <a href="#">Inicio</a>
+                  <a href="index.html">Inicio</a>
                 </li>
                 <li>
-                  <a href="#">Alterar Senha</a>
+                  <a href="alteracao-senha.html">Alterar Senha</a>
                 </li>
                 <li>
-                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Novo Registro</a>
-                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                   <li>
-                     <a href="#">Cadastrar Usuario</a>
-                   </li>
-                   <li>
-                     <a href="#">Gerar Ocorrência</a>
-                   </li>
-                 </ul>
-               </li>
-               <li>
-                 <a href="#">Pesquisar</a>
-               </li>
-             </ul>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Novo Registro</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                    <a href="mantém-usuario.html">Cadastrar Usuario</a>
+                  </li>
+                  <li>
+                    <a href="ocorrencia.html">Gerar Ocorrência</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="monitoramento_ocorrencias.html">Pesquisar</a>
+              </li>
+            </ul>
+    
      
              <div class="footer">
                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -70,8 +71,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
                <div class="card-body">                              
                 <form action="#" method="POST">
-                    <button type="button" class="col-sm-3 btn btn-outline"></button>           
-                    <input class="btn btn-outline-secondary col-sm-6" type="search" name="Pesquisar" placeholder="Buscar" 
+                            
+                    <input class="espaço2 btn btn-outline-secondary col-sm-6" type="search" name="Pesquisar" placeholder="Buscar" 
                       list="historico" required>
                       <button class="btn btn-outline-dark" type="submit" id="butto-addon2"><i class="fas fa-search"></i>
                       </button>
